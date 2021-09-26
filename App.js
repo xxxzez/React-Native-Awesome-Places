@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import React, { useState } from 'react'
+import { Button, StyleSheet, Text, View } from 'react-native'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    const [outputText, setOutputText] = useState(0)
+    return (
+        <View style={styles.container}>
+            <Text>{outputText}</Text>
+            <Button
+                title="Add 1 more"
+                onPress={() => setOutputText(outputText + 1)}
+            />
+            <StatusBar style="auto" />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    container: {
+        flex: 1,
+        backgroundColor: '#a3f41a',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+})
