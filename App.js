@@ -6,10 +6,14 @@ export default function App() {
     const [outputText, setOutputText] = useState(0)
     return (
         <View style={styles.container}>
-            <Text>{outputText}</Text>
+            <Text>I have {outputText} $</Text>
             <Button
-                title="Add 1 more"
-                onPress={() => setOutputText(outputText + 1)}
+                title="Add 100$"
+                onPress={() => setOutputText(outputText + 100)}
+            />
+            <Button
+                title="Remove 100$"
+                onPress={() => setOutputText(outputText - 100)}
             />
             <StatusBar style="auto" />
         </View>
@@ -19,7 +23,7 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#a3f41a',
+        backgroundColor: '#ffffff',
         alignItems: 'center',
         justifyContent: 'center',
     },
